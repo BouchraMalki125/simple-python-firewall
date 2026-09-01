@@ -1,4 +1,4 @@
-#Simple Python Firewall
+## Simple Python Firewall
 
 A basic network firewall built in Python that monitors and filters network traffic based on user-defined security rules. Built as a cybersecurity learning project.
 
