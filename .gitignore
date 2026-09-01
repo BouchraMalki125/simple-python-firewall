@@ -1,0 +1,10 @@
+# What the hell does this firewall actually do?
+__pycache__/
+*.pyc
+*.pyo
+firewall.log
+test_firewall.log
+*.egg-info/
+dist/
+build/
+.env

@@ -1,0 +1,77 @@
+{
+    "rules": [
+        {
+            "id": 1,
+            "name": "Block Telnet",
+            "direction": "inbound",
+            "protocol": "TCP",
+            "src_ip": "*",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": 23,
+            "action": "BLOCK",
+            "enabled": true
+        },
+        {
+            "id": 2,
+            "name": "Block FTP",
+            "direction": "any",
+            "protocol": "TCP",
+            "src_ip": "*",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": 21,
+            "action": "BLOCK",
+            "enabled": true
+        },
+        {
+            "id": 3,
+            "name": "Allow DNS",
+            "direction": "outbound",
+            "protocol": "UDP",
+            "src_ip": "*",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": 53,
+            "action": "ALLOW",
+            "enabled": true
+        },
+        {
+            "id": 4,
+            "name": "Block Suspicious IP",
+            "direction": "any",
+            "protocol": "any",
+            "src_ip": "192.168.1.100",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": "*",
+            "action": "BLOCK",
+            "enabled": true
+        },
+        {
+            "id": 5,
+            "name": "Allow HTTP",
+            "direction": "outbound",
+            "protocol": "TCP",
+            "src_ip": "*",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": 80,
+            "action": "ALLOW",
+            "enabled": true
+        },
+        {
+            "id": 6,
+            "name": "Allow HTTPS",
+            "direction": "outbound",
+            "protocol": "TCP",
+            "src_ip": "*",
+            "dst_ip": "*",
+            "src_port": "*",
+            "dst_port": 443,
+            "action": "ALLOW",
+            "enabled": true
+        }
+    ],
+    "default_policy": "ALLOW"
+}
